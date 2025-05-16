@@ -299,7 +299,7 @@ with footer_col2:
             <div style="margin-bottom: 5px; font-size: 0.9em; color: #666;">App teilen</div>
         </div>
     """, unsafe_allow_html=True)
-    st.image("qr_code.png", width=180)  # Etwas größer für bessere Sichtbarkeit
+    st.image("qr_code (1).png", width=180)  # Etwas größer für bessere Sichtbarkeit
 
 # Copyright und zusätzliche Informationen
 st.markdown(
