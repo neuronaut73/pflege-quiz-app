@@ -8,11 +8,22 @@ st.set_page_config(
     page_title="Pflegekonzepte Quiz",
     page_icon="🧠",
     layout="centered",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",  # Seitenleiste standardmäßig geöffnet
     menu_items={
         'About': "Quiz-App für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung"
     }
 )
+
+# QR-Code in der Seitenleiste anzeigen
+with st.sidebar:
+    st.image("qr-code (1).png", width=200)
+    st.markdown(
+        '<div style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 20px;">'
+        'App teilen'
+        '</div>',
+        unsafe_allow_html=True
+    )
+    st.markdown("---")
 
 # CSS für besseres Aussehen
 st.markdown("""
@@ -137,7 +148,14 @@ def next_question():
     else:
         st.session_state.quiz_completed = True
 
-# Header mit Titel und Reset-Button
+# Header mit Titel, Credits und Reset-Button
+st.markdown(
+    '<div style="text-align: center; color: #888; font-size: 0.9em; margin-bottom: 10px;">'
+    'Quiz-App designed von Dr. Wrede <a href="http://www.patrec.eu" style="color: #4a86e8;">www.patrec.eu</a> für Märkisches Seniorenzentrum'
+    '</div>',
+    unsafe_allow_html=True
+)
+
 st.markdown('<div class="header-container">', unsafe_allow_html=True)
 st.title("🧠 Pflegekonzepte Quiz")
 if st.button("Quiz neu starten"):
@@ -281,25 +299,13 @@ else:
 # Footer
 st.markdown("---")
 
-# Zwei Spalten für Footer: Text und QR-Code
-footer_col1, footer_col2 = st.columns([3, 1])
-
-with footer_col1:
-    st.markdown(
-        '<div style="color: #aaa; padding: 10px;">'
-        '📚 Quiz für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung'
-        '</div>',
-        unsafe_allow_html=True
-    )
-
-with footer_col2:
-    # QR-Code anzeigen mit verbessertem Styling
-    st.markdown("""
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <div style="margin-bottom: 5px; font-size: 0.9em; color: #666;">App teilen</div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.image("qr_code (1).png", width=180)  # Etwas größer für bessere Sichtbarkeit
+# Footer-Text
+st.markdown(
+    '<div style="color: #aaa; padding: 10px; text-align: center;">'
+    '📚 Quiz für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung'
+    '</div>',
+    unsafe_allow_html=True
+)
 
 # Copyright und zusätzliche Informationen
 st.markdown(
