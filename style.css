@@ -1,0 +1,121 @@
+/* Hauptstil für die Quiz-App */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header-Stil */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+h2, h3 {
+    color: #34495e;
+}
+
+/* Fortschrittsbalken */
+.stProgress > div > div {
+    background-color: #4caf50;
+}
+
+/* Button-Stil */
+.stButton button {
+    width: 100%;
+    border-radius: 5px;
+    height: 3em;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #34495e;
+    color: white;
+    border: 1px solid #2c3e50;
+}
+
+.stButton button:hover {
+    background-color: #2c3e50;
+    border-color: #1a252f;
+    color: white;
+}
+
+/* Antwort-Boxen */
+.option-box {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.correct-answer {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.wrong-answer {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.neutral {
+    background-color: #34495e;
+    border: 1px solid #2c3e50;
+    color: white;
+}
+
+/* Feedback-Box */
+.feedback-box {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+/* Container-Stile */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    margin: 20px 0;
+}
+
+.question-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.result-container {
+    text-align: center;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
