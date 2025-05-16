@@ -1,0 +1,3 @@
+Dieser QR-Code wurde in die Streamlit-App integriert und ist im Hauptverzeichnis als qr_code.png gespeichert. Er wird im Footer der App angezeigt und kann zum Teilen der App verwendet werden.
+
+Der neue QR-Code hat ein attraktives Design mit grünen Sternen und orangefarbenen Ecken, was ihn visuell ansprechender macht als der Standard-QR-Code.

@@ -280,9 +280,31 @@ else:
 
 # Footer
 st.markdown("---")
+
+# Zwei Spalten für Footer: Text und QR-Code
+footer_col1, footer_col2 = st.columns([3, 1])
+
+with footer_col1:
+    st.markdown(
+        '<div style="color: #aaa; padding: 10px;">'
+        '📚 Quiz für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung'
+        '</div>',
+        unsafe_allow_html=True
+    )
+
+with footer_col2:
+    # QR-Code anzeigen mit verbessertem Styling
+    st.markdown("""
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="margin-bottom: 5px; font-size: 0.9em; color: #666;">App teilen</div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.image("qr_code.png", width=180)  # Etwas größer für bessere Sichtbarkeit
+
+# Copyright und zusätzliche Informationen
 st.markdown(
-    '<div style="text-align: center; color: #aaa; padding: 10px;">'
-    '📚 Quiz für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung'
+    '<div style="text-align: center; color: #888; font-size: 0.8em; margin-top: 20px;">'
+    '© 2023 Pflege-Quiz-App | Entwickelt mit Streamlit'
     '</div>',
     unsafe_allow_html=True
 )
