@@ -16,7 +16,7 @@ st.set_page_config(
 
 # QR-Code in der Seitenleiste anzeigen
 with st.sidebar:
-    st.image("qr-code (1).png", width=200)
+    st.image("qr-code (2).png", width=200)
     st.markdown(
         '<div style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 20px;">'
         'App teilen'
