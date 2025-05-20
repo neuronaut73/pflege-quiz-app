@@ -148,7 +148,7 @@ st.markdown(
 )
 
 st.markdown('<div class="header-container">', unsafe_allow_html=True)
-st.title("🧠 Pflegekonzepte Quiz")
+st.title("🧠 Quiz zur Pflegeplanung – Vorbereitung für Theorie & Praxis")
 if st.button("Quiz neu starten"):
     reset_quiz()
 st.markdown('</div>', unsafe_allow_html=True)
