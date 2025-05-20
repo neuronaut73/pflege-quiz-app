@@ -8,22 +8,13 @@ st.set_page_config(
     page_title="Pflegekonzepte Quiz",
     page_icon="🧠",
     layout="centered",
-    initial_sidebar_state="expanded",  # Seitenleiste standardmäßig geöffnet
+    initial_sidebar_state="collapsed",  # Seitenleiste standardmäßig geschlossen
     menu_items={
         'About': "Quiz-App für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung"
     }
 )
 
-# QR-Code in der Seitenleiste anzeigen
-with st.sidebar:
-    st.image("qr-code (2).png", width=200)
-    st.markdown(
-        '<div style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 20px;">'
-        'App teilen'
-        '</div>',
-        unsafe_allow_html=True
-    )
-    st.markdown("---")
+# Keine Seitenleiste mehr für den QR-Code
 
 # CSS für besseres Aussehen
 st.markdown("""
@@ -151,7 +142,7 @@ def next_question():
 # Header mit Titel, Credits und Reset-Button
 st.markdown(
     '<div style="text-align: center; color: #888; font-size: 0.9em; margin-bottom: 10px;">'
-    'Quiz-App designed von Dr. Wrede <a href="http://www.patrec.eu" style="color: #4a86e8;">www.patrec.eu</a> für Märkisches Seniorenzentrum'
+    'Quiz-App designed von <a href="http://www.patrec.eu" style="color: #4a86e8;">www.patrec.eu</a> für Märkisches Seniorenzentrum'
     '</div>',
     unsafe_allow_html=True
 )
@@ -162,7 +153,7 @@ if st.button("Quiz neu starten"):
     reset_quiz()
 st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown("### Testen Sie Ihr Wissen zu pflegerischen Konzepten!")
+st.markdown("### Testen Sie Ihr Wissen zu Pflegekonzepten!")
 
 # Fortschrittsbalken
 progress = (st.session_state.current_question_index) / len(questions)
@@ -299,18 +290,25 @@ else:
 # Footer
 st.markdown("---")
 
-# Footer-Text
-st.markdown(
-    '<div style="color: #aaa; padding: 10px; text-align: center;">'
-    '📚 Quiz für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung'
-    '</div>',
-    unsafe_allow_html=True
-)
+# Footer mit Text und QR-Code
+col1, col2 = st.columns([3, 1])
+
+with col1:
+    st.markdown(
+        '<div style="color: #aaa; padding: 10px;">'
+        '📚 Quiz für Pflegefachpersonen in der Weiterbildung zur Praxisanleitung'
+        '</div>',
+        unsafe_allow_html=True
+    )
+
+with col2:
+    # QR-Code anzeigen
+    st.image("qr-code (2).png", width=150)
 
 # Copyright und zusätzliche Informationen
 st.markdown(
     '<div style="text-align: center; color: #888; font-size: 0.8em; margin-top: 20px;">'
-    '© 2023 Pflege-Quiz-App | Entwickelt mit Streamlit'
+    '© 2025 PatRec Pflege-Quiz-App | Entwickelt mit Streamlit'
     '</div>',
     unsafe_allow_html=True
 )
